@@ -1,0 +1,77 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Horas de Trabajo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Horas de Trabajo</h1>
+        
+        <form id="workHoursForm">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Rango:</label>
+                <input type="text" id="role" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Fecha:</label>
+                <input type="date" id="date" required>
+            </div>
+            <div class="form-group">
+                <label for="entryTime">Hora de Entrada:</label>
+                <input type="time" id="entryTime" required>
+            </div>
+            <div class="form-group">
+                <label for="exitTime">Hora de Salida:</label>
+                <input type="time" id="exitTime" required>
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+
+        <div class="search-section">
+            <input type="text" id="searchInput" placeholder="Buscar por nombre">
+            <button id="searchButton">Buscar</button>
+        </div>
+
+        <table id="workHoursTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Rango</th>
+                    <th>Fecha</th>
+                    <th>Hora de Entrada</th>
+                    <th>Hora de Salida</th>
+                    <th>Horas Trabajadas</th>
+                    <th>Cumplimiento</th>
+                </tr>
+            </thead>
+            <tbody id="workHoursBody"></tbody>
+        </table>
+
+        <div class="actions">
+            <button id="resetTableBtn">Reiniciar Tabla</button>
+        </div>
+
+        <div class="weekly-summary">
+            <h2>Resumen Semanal</h2>
+            <table id="weeklySummaryTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Horas Totales</th>
+                        <th>Cumplimiento Semanal</th>
+                    </tr>
+                </thead>
+                <tbody id="weeklySummaryBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
